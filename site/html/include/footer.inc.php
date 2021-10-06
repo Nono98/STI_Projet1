@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-7">
-            <p>Loïs Diserens - Robin Gaudin - Noémie Plancherel</p>
+            <p>STI - Projet 1 / Robin Gaudin - Noémie Plancherel</p>
         </div>
         <div class="col-lg-3">
             <ul class="list-unstyled">

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-<?php include 'include/header.inc.php'; ?>
+<?php include "include/header.inc.php" ?>
 <body>
 <?php include "include/navbar.inc.php" ?>
 <div class="container">
@@ -31,11 +31,6 @@
                         <div class="col-lg-8">
                             <button type="submit" class="btn btn-outline-primary">Connexion</button>
                         </div>
-                    </div>
-                </form>
-                <form action="./newAccount.php" method="post">
-                    <div class="col-lg-8">
-                        <button type="submit" class="btn btn-outline-primary">Nouveau compte</button>
                     </div>
                 </form>
             </div>
