@@ -69,9 +69,7 @@ class dbConnection {
     public function getUser($username){
         $this->openConnection();
 
-        //$result = $this->file_db->query("SELECT * FROM User WHERE username = '$username'");
-
-        $result = $this->file_db->query("SELECT * FROM User");
+        $result = $this->file_db->query("SELECT * FROM User WHERE username = '$username'");
 
         $this->closeConnection();
 
@@ -90,6 +88,22 @@ class dbConnection {
         $this->openConnection();
 
         $this->file_db->exec("DELETE FROM User WHERE username = '$username'");
+
+        $this->closeConnection();
+    }
+
+    public function editUser($username, $password, $validity, $role){
+        $this->openConnection();
+
+        $this->file_db->exec("UPDATE User SET password = '$password', validty = '$validity', role = '$role' WHERE username = '$username'");
+
+        $this->closeConnection();
+    }
+    
+    public function editPassword($username, $password){
+        $this->openConnection();
+
+        $this->file_db->exec("UPDATE User SET password = '$password' WHERE username = '$username'");
 
         $this->closeConnection();
     }
