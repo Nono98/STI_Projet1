@@ -59,10 +59,38 @@ class dbConnection {
     public function getUsers(){
         $this->openConnection();
         
-        $result =  $this->file_db->query('SELECT * FROM User');
+        $result = $this->file_db->query('SELECT * FROM User');
 
         $this->closeConnection();
         
         return $result;
+    }
+
+    public function getUser($username){
+        $this->openConnection();
+
+        //$result = $this->file_db->query("SELECT * FROM User WHERE username = '$username'");
+
+        $result = $this->file_db->query("SELECT * FROM User");
+
+        $this->closeConnection();
+
+        return $result;
+    }
+
+    public function addUser($username, $password, $validity, $role){
+        $this->openConnection();
+
+        $this->file_db->exec("INSERT INTO User (username, password, validty, role) VALUES ('$username', '$password', '$validity', '$role')");
+
+        $this->closeConnection();
+    }
+
+    public function deleteUser($username){
+        $this->openConnection();
+
+        $this->file_db->exec("DELETE FROM User WHERE username = '$username'");
+
+        $this->closeConnection();
     }
 }

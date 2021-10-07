@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="fr">
-<?php include "include/header.inc.php" ?>
+<?php include_once('./include/header.inc.php'); ?>
 <body>
-<?php include "include/navbar.inc.php" ?>
+<?php include_once('./include/navbar.inc.php'); ?>
 <div class="container">
     <!-- Test si la variable $_SESSION['Login'] n'existe pas pour afficher le formulaire de connexion -->
     <?php if (!isset($_SESSION['Login'])) { ?>
         <div class="jumbotron text-center">
-            <h1>Connexion à la plateforme</h1>
+            <h1>Connect to the platform</h1>
         </div>
         <div class="row justify-content-lg-center">
             <div class="col-lg-6">
                 <!-- Formulaire de connexion -->
                 <form action="./loginTreat.php" method="post">
                     <div class="form-group">
-                        <label for="inputLogin" class="col-lg-8">Nom d'utilisateur</label>
+                        <label for="inputLogin" class="col-lg-8">Username</label>
                         <div class="col-lg-12">
-                            <input type="text" class="form-control form-connexion-input" id="inputLogin" name="inputLogin" placeholder="Nom d'utilisateur">
+                            <input type="text" class="form-control form-connexion-input" id="inputLogin" name="inputLogin" placeholder="Username">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="inputPassword" class="col-lg-8">Mot de passe</label>
+                        <label for="inputPassword" class="col-lg-8">Password</label>
                         <div class="col-lg-12">
-                            <input type="password" class="form-control form-connexion-input" id="inputPassword" name="inputPassword" placeholder="Mot de passe">
+                            <input type="password" class="form-control form-connexion-input" id="inputPassword" name="inputPassword" placeholder="Password">
                         </div>
                     </div>
 
@@ -44,7 +44,7 @@
         <?php } ?>
     <?php } ?>
 </div>
-<?php include "include/footer.inc.php" ?>
+<?php include_once('./include/footer.inc.php'); ?>
 </body>
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>

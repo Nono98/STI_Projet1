@@ -1,3 +1,7 @@
+<html>
+<head></head>
+<body>
+
 <?php
 
 // Test si l'appel de ce contrôleur vient bien d'une page du site
@@ -7,14 +11,14 @@ if(isset($_SERVER['HTTP_REFERER'])) {
 
     $dbConnection = new dbConnection();
 
-// Récupération des identifiants entrés
+    // Récupération des identifiants entrés
     $username = $_POST['inputLogin'];
     $password = $_POST['inputPassword'];
 
-// Récupération des utilisateurs dans la bdd
+    // Récupération des utilisateurs dans la bdd
     $users = $dbConnection->getUsers();
 
-// Test des informations
+    // Test des informations
     $rightInfos = false;
     $isAdmin = false;
     foreach($users as $u){
@@ -28,7 +32,7 @@ if(isset($_SERVER['HTTP_REFERER'])) {
 
     session_start();
 
-// Si cela correspond, on ouvre la connexion, puis on redirige vers la page index.php
+    // Si cela correspond, on ouvre la connexion, puis on redirige vers la page index.php
     if($rightInfos == true) {
         $_SESSION['Login'] = $username;
         if($isAdmin == true){
@@ -40,3 +44,8 @@ if(isset($_SERVER['HTTP_REFERER'])) {
 } else {
     header('Location:./index.php');
 }
+
+?>
+
+</body>
+</html>

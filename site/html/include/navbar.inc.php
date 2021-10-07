@@ -16,20 +16,21 @@ if(!isset($_SESSION['Login'])){
                 <?php if(isset($_SESSION['Login'])){ ?>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="./index.php">Accueil</a>
+                        <a class="nav-link" href="./index.php">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="./addPublication.php">Ajout d'une publication</a>
+                        <a class="nav-link" href="./newMessage.php">New message</a>
                     </li>
+                    <?php if(isset($_SESSION['IsAdmin'])){ ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./addUser.php">Add a user</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="./addSubject.php">Ajout d'un sujet</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="./showUsers.php">Voir utilisateurs</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./users.php">Users</a>
+                        </li>
+                    <?php } ?>
                 <?php }
                 else { ?>
                     <li class="nav-item">
@@ -44,12 +45,7 @@ if(!isset($_SESSION['Login'])){
                         Mon profil
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownmenu">
-                        <a href="./showPublicationsByUser.php" class="dropdown-item" title="myPublications">Mes publications</a>
-                        <a href="./showSubscriptions.php" class="dropdown-item" title="mySubscriptions">Mes abonnements</a>
-                        <a href="./showSubscribers.php" class="dropdown-item" title="mySubscribers">Mes abonnés</a>
-                        <a href="./showBlockedUsers.php" class="dropdown-item" title="blockedUsers">Personnes bloquées</a>
-                        <a href="./showBlockingUsers.php" class="dropdown-item" title="blockingUsers">Personnes me bloquant</a>
-                        <a href="./editInformations.php" class="dropdown-item" title="myInformations">Mes informations</a>
+                        <a href="./editPassword.php" class="dropdown-item" title="editPassword">Modifier le mot de passe</a>
                         <a href="./logoutTreat.php" class="dropdown-item" title="disconnection">Déconnexion</a>
                     </div>
                 </div>
