@@ -76,7 +76,20 @@ class dbConnection {
         return $result;
     }
 
+    public function getUsernames($username){
+        $this->openConnection();
+
+        $result = $this->file_db->query("SELECT username FROM User WHERE username != '$username'");
+
+        $this->closeConnection();
+
+        return $result;
+    }
+
     public function addUser($username, $password, $validity, $role){
+        $this->openConnection();
+
+        $this->file_db->exec("INSERT INTO Message (date, from, to, subject, message) ");
         $this->openConnection();
 
         $this->file_db->exec("INSERT INTO User (username, password, validty, role) VALUES ('$username', '$password', '$validity', '$role')");
@@ -86,6 +99,9 @@ class dbConnection {
 
     public function deleteUser($username){
         $this->openConnection();
+        $this->openConnection();
+
+        $this->file_db->exec("INSERT INTO Message (date, from, to, subject, message) ");
 
         $this->file_db->exec("DELETE FROM User WHERE username = '$username'");
 
@@ -104,6 +120,14 @@ class dbConnection {
         $this->openConnection();
 
         $this->file_db->exec("UPDATE User SET password = '$password' WHERE username = '$username'");
+
+        $this->closeConnection();
+    }
+
+    public function newMessage($username, $date, $to, $subject, $message){
+        $this->openConnection();
+
+        $this->file_db->exec("INSERT INTO Message ('date', 'from', 'to', 'subject', 'message') VALUES ('$date', '$username', '$to', '$subject', '$message')");
 
         $this->closeConnection();
     }
