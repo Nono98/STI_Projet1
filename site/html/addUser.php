@@ -28,14 +28,20 @@
                 <div class="form-group">
                     <label for="inputValidity" class="col-lg-8">Validity<span style="color: red">*</span></label>
                     <div class="col-lg-12">
-                        <input type="text" class="form-control form-connexion-input" id="inputValidity" name="inputValidity" placeholder="0 or 1">
+                        <select class="form-control" id="inputValidity" name="inputValidity">
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                        </select>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="inputRole" class="col-lg-8">Role<span style="color: red">*</span></label>
                     <div class="col-lg-12">
-                        <input type="text" class="form-control form-connexion-input" id="inputRole" name="inputRole" placeholder="0 or 1">
+                        <select class="form-control" id="inputRole" name="inputRole">
+                            <option value="0">Standard</option>
+                            <option value="1">Administrator</option>
+                        </select>
                     </div>
                 </div>
 
