@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e415e919-df4f-4628-b726-50096cdb9f05" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/class/dbConnection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loginTreat.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../databases/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/../databases/database.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example.php" beforeDir="false" afterPath="$PROJECT_DIR$/example.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/footer.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/footer.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/dbConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/dbConnection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/navbar.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/navbar.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginTreat.php" beforeDir="false" afterPath="$PROJECT_DIR$/loginTreat.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +66,8 @@
       <workItem from="1633509746534" duration="5663000" />
       <workItem from="1633526354633" duration="101000" />
       <workItem from="1633526456816" duration="933000" />
-      <workItem from="1633549404128" duration="3172000" />
+      <workItem from="1633549404128" duration="3438000" />
+      <workItem from="1633591279735" duration="6325000" />
     </task>
     <servers />
   </component>

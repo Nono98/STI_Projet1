@@ -16,7 +16,7 @@ if(!isset($_SESSION['Login'])){
                 <?php if(isset($_SESSION['Login'])){ ?>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="./index.php">Fil d'actualité</a>
+                        <a class="nav-link" href="./index.php">Accueil</a>
                     </li>
 
                     <li class="nav-item">

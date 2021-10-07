@@ -38,7 +38,10 @@
 
         <!-- Si un utilisateur est connecté, affiche le fil d'actualité -->
     <?php } else { ?>
-
+        <h1>Connecté ouaiiiis</h1>
+        <?php if(isset($_SESSION['IsAdmin'])){ ?>
+            <h2>Admin</h2>
+        <?php } ?>
     <?php } ?>
 </div>
 <?php include "include/footer.inc.php" ?>

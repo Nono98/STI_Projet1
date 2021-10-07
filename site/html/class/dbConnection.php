@@ -2,18 +2,26 @@
 
 class dbConnection {
 
-    public function addUsers(){
+    private $file_db;
+
+    private function openConnection(){
         // Set default timezone
         date_default_timezone_set('UTC');
 
 
         // Create (connect to) SQLite database in file
-        $file_db = new PDO('sqlite:/usr/share/nginx/databases/database.sqlite');
+        $this->file_db = new PDO('sqlite:/usr/share/nginx/databases/database.sqlite');
         // Set errormode to exceptions
-        $file_db->setAttribute(PDO::ATTR_ERRMODE,
+        $this->file_db->setAttribute(PDO::ATTR_ERRMODE,
             PDO::ERRMODE_EXCEPTION);
+    }
 
+    private function closeConnection(){
+        // Close file db connection
+        $this->file_db = null;
+    }
 
+    public function addUsers(){
         // Array with some test data to insert to database
         $users = array(
             array('username' => 'user1',
@@ -27,33 +35,33 @@ class dbConnection {
             array('username' => 'admin1',
                 'password' => 'Admin1',
                 'validity' => 1,
-                'role' => 0)
+                'role' => 1)
         );
+        
+        $this->openConnection();
+
+        $this->file_db->exec("DROP TABLE User");
+
+        $this->file_db->exec("CREATE TABLE IF NOT EXISTS User (
+                    username TEXT PRIMARY KEY NOT NULL, 
+                    password TEXT NOT NULL, 
+                    validty INTEGER NOT NULL, 
+                    role INTEGER NOT NULL)");
 
         foreach ($users as $u) {
-            $file_db->exec("INSERT INTO User (username, password, validity, role)
+            $this->file_db->exec("INSERT INTO User (username, password, validty, role)
                     VALUES ('{$u['username']}', '{$u['password']}', '{$u['validity']}', '{$u['role']}')");
         }
-
-        // Close file db connection
-        $file_db = null;
+        
+        $this->closeConnection();
     }
     
     public function getUsers(){
-        // Set default timezone
-        date_default_timezone_set('UTC');
-
-
-        // Create (connect to) SQLite database in file
-        $file_db = new PDO('sqlite:/usr/share/nginx/databases/database.sqlite');
-        // Set errormode to exceptions
-        $file_db->setAttribute(PDO::ATTR_ERRMODE,
-            PDO::ERRMODE_EXCEPTION);
+        $this->openConnection();
         
-        $result =  $file_db->query('SELECT * FROM User');
+        $result =  $this->file_db->query('SELECT * FROM User');
 
-        // Close file db connection
-        $file_db = null;
+        $this->closeConnection();
         
         return $result;
     }
