@@ -39,8 +39,8 @@
                     <label for="inputValidity" class="col-lg-8">Validity<span style="color: red">*</span></label>
                     <div class="col-lg-12">
                         <select class="form-control" id="inputValidity" name="inputValidity">
-                            <option <?php if($usr['validty'] == 1) { ?> selected <?php } ?> value="1">Yes</option>
-                            <option <?php if($usr['validty'] == 0) { ?> selected <?php } ?> value="0">No</option>
+                            <option <?php if($usr['validity'] == 1) { ?> selected <?php } ?> value="1">Yes</option>
+                            <option <?php if($usr['validity'] == 0) { ?> selected <?php } ?> value="0">No</option>
                         </select>
                     </div>
                 </div>

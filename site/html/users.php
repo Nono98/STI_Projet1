@@ -32,7 +32,7 @@
                         <tr>
                             <td><?php echo $u['username'] ?></td>
                             <td><?php echo $u['password'] ?></td>
-                            <td><?php echo $u['validty'] ?></td>
+                            <td><?php echo $u['validity'] ?></td>
                             <td><?php echo $u['role'] ?></td>
                             <td>
                                 <form action="./editUser.php" method="post">

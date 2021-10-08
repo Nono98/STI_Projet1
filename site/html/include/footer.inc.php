@@ -1,4 +1,4 @@
-<footer class="bg-white fixed">
+<footer class="bg-white" style="left: 0; bottom: 0; width: 100%; position: fixed">
     <hr>
     <div class="row">
         <div class="col-lg-2"></div>

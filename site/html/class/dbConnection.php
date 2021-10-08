@@ -20,41 +20,6 @@ class dbConnection {
         // Close file db connection
         $this->file_db = null;
     }
-
-    public function addUsers(){
-        // Array with some test data to insert to database
-        $users = array(
-            array('username' => 'user1',
-                'password' => 'User1',
-                'validity' => 1,
-                'role' => 0),
-            array('username' => 'user2',
-                'password' => 'User2',
-                'validity' => 1,
-                'role' => 0),
-            array('username' => 'admin1',
-                'password' => 'Admin1',
-                'validity' => 1,
-                'role' => 1)
-        );
-        
-        $this->openConnection();
-
-        $this->file_db->exec("DROP TABLE User");
-
-        $this->file_db->exec("CREATE TABLE IF NOT EXISTS User (
-                    username TEXT PRIMARY KEY NOT NULL, 
-                    password TEXT NOT NULL, 
-                    validty INTEGER NOT NULL, 
-                    role INTEGER NOT NULL)");
-
-        foreach ($users as $u) {
-            $this->file_db->exec("INSERT INTO User (username, password, validty, role)
-                    VALUES ('{$u['username']}', '{$u['password']}', '{$u['validity']}', '{$u['role']}')");
-        }
-        
-        $this->closeConnection();
-    }
     
     public function getUsers(){
         $this->openConnection();
@@ -89,7 +54,7 @@ class dbConnection {
     public function addUser($username, $password, $validity, $role){
         $this->openConnection();
 
-        $this->file_db->exec("INSERT INTO User (username, password, validty, role) VALUES ('$username', '$password', '$validity', '$role')");
+        $this->file_db->exec("INSERT INTO User (username, password, validity, role) VALUES ('$username', '$password', '$validity', '$role')");
 
         $this->closeConnection();
     }
@@ -105,7 +70,7 @@ class dbConnection {
     public function editUser($username, $password, $validity, $role){
         $this->openConnection();
 
-        $this->file_db->exec("UPDATE User SET password = '$password', validty = '$validity', role = '$role' WHERE username = '$username'");
+        $this->file_db->exec("UPDATE User SET password = '$password', validity = '$validity', role = '$role' WHERE username = '$username'");
 
         $this->closeConnection();
     }

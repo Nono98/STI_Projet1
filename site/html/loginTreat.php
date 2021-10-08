@@ -22,7 +22,7 @@ if(isset($_SERVER['HTTP_REFERER'])) {
     $rightInfos = false;
     $isAdmin = false;
     foreach($users as $u){
-        if ($u['username'] == $username && $u['password'] == $password && $u['validty'] == 1){
+        if ($u['username'] == $username && $u['password'] == $password && $u['validity'] == 1){
             $rightInfos = true;
             if($u['role'] == 1){
                 $isAdmin = true;
