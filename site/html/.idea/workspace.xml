@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e415e919-df4f-4628-b726-50096cdb9f05" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../databases/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/../databases/database.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/class/dbConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/dbConnection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/footer.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/footer.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +67,8 @@
       <workItem from="1633526456816" duration="933000" />
       <workItem from="1633549404128" duration="3438000" />
       <workItem from="1633591279735" duration="15632000" />
-      <workItem from="1633628891912" duration="9334000" />
+      <workItem from="1633628891912" duration="9474000" />
+      <workItem from="1633691677160" duration="5483000" />
     </task>
     <servers />
   </component>

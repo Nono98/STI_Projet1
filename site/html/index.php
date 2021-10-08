@@ -36,12 +36,60 @@
             </div>
         </div>
 
-        <!-- Si un utilisateur est connecté, affiche le fil d'actualité -->
-    <?php } else { ?>
-        <h1>Connecté ouaiiiis</h1>
-        <?php if(isset($_SESSION['IsAdmin'])){ ?>
-            <h2>Admin</h2>
-        <?php } ?>
+    <!-- Si un utilisateur est connecté, affiche sa boîte mail -->
+    <?php } else {
+
+        // Appel de la classe de connexion
+        require('class/dbConnection.php');
+
+        $dbConnection = new dbConnection();
+
+        $messages = $dbConnection->getMessages(); ?>
+        <div class="jumbotron text-center">
+            <h1>Mailbox</h1>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-lg-10">
+                <div class="form-group">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Date</th>
+                            <th>From</th>
+                            <th>Subject</th>
+                            <th>Details</th>
+                            <th>Answer</th>
+                            <th>Delete</th>
+                        </tr>
+                        <?php foreach($messages as $m){
+                            if($m['to'] == $_SESSION['Login']) {?>
+                            <tr>
+                                <td><?php echo $m['date'] ?></td>
+                                <td><?php echo $m['from'] ?></td>
+                                <td><?php echo $m['subject'] ?></td>
+                                <td>
+                                    <form action="./showDetails.php" method="post">
+                                        <input type="hidden" id="idMessage" name="idMessage" value="<?php echo $m['id'] ?>"/>
+                                        <button type="submit" class="btn btn-outline-primary btn-xs">Details</button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="./answerMessage.php" method="post">
+                                        <input type="hidden" id="idMessage" name="idMessage" value="<?php echo $m['id'] ?>"/>
+                                        <button type="submit" class="btn btn-outline-primary btn-xs">Answer</button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="./deleteMessageTreat.php" method="post">
+                                        <input type="hidden" id="idMessage" name="idMessage" value="<?php echo $m['id'] ?>"/>
+                                        <button type="submit" class="btn btn-outline-danger btn-xs">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        <?php } } ?>
+                    </table>
+                </div>
+            </div>
+        </div>
     <?php } ?>
 </div>
 <?php include_once('./include/footer.inc.php'); ?>

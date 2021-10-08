@@ -89,9 +89,6 @@ class dbConnection {
     public function addUser($username, $password, $validity, $role){
         $this->openConnection();
 
-        $this->file_db->exec("INSERT INTO Message (date, from, to, subject, message) ");
-        $this->openConnection();
-
         $this->file_db->exec("INSERT INTO User (username, password, validty, role) VALUES ('$username', '$password', '$validity', '$role')");
 
         $this->closeConnection();
@@ -99,9 +96,6 @@ class dbConnection {
 
     public function deleteUser($username){
         $this->openConnection();
-        $this->openConnection();
-
-        $this->file_db->exec("INSERT INTO Message (date, from, to, subject, message) ");
 
         $this->file_db->exec("DELETE FROM User WHERE username = '$username'");
 
@@ -128,6 +122,34 @@ class dbConnection {
         $this->openConnection();
 
         $this->file_db->exec("INSERT INTO Message ('date', 'from', 'to', 'subject', 'message') VALUES ('$date', '$username', '$to', '$subject', '$message')");
+
+        $this->closeConnection();
+    }
+
+    public function getMessages(){
+        $this->openConnection();
+
+        $result = $this->file_db->query("SELECT * FROM Message ORDER BY date DESC");
+
+        $this->closeConnection();
+
+        return $result;
+    }
+
+    public function getMessage($id){
+        $this->openConnection();
+
+        $result = $this->file_db->query("SELECT * FROM Message WHERE id = '$id'");
+
+        $this->closeConnection();
+
+        return $result;
+    }
+
+    public function deleteMessage($id) {
+        $this->openConnection();
+
+        $this->file_db->exec("DELETE FROM Message WHERE id = '$id'");
 
         $this->closeConnection();
     }

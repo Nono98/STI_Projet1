@@ -8,7 +8,7 @@
         <div class="col-lg-3">
             <ul class="list-unstyled">
                 <!-- Back to top -->
-                <li class="pull-right"><a href="#top">Retour en haut</a></li>
+                <li class="pull-right"><a href="#top">Back on top</a></li>
             </ul>
         </div>
     </div>
