@@ -63,7 +63,7 @@ Ainsi on peut directement répondre au message en appuyant sur le bouton `Answer
 
 ![](images/answer.png)
 
-Vu que c'est une réponse, il n'est pas possible de modifier le destinataire et le sujet du message. Nous avons ajouté au sujet du message `RE:` afin de préciser qu'il s'agit d'une réponse.
+Vu que c'est une réponse, il n'est pas possible de modifier le destinataire et le sujet du message. De plus, nous avons ajouté au sujet du message `RE:` afin de préciser qu'il s'agit d'une réponse.
 
 ### Suppression d'un message
 
@@ -72,12 +72,11 @@ Il est possible de supprimer un mail à l'aide du bouton `Delete` sur la page pr
 ![](images/delete.png)
 
 
-
 ### Ecrire un message
 
 On peut directement écrire un nouveau message:
 
-![](/home/noemie/Documents/STI/Projet1/STI_Projet1/images/new.png)
+![](images/new.png)
 
 On peut donc choisir un destinataire parmi tous les utilisateurs et écrire un sujet et le contenu du message:
 
