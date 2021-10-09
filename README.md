@@ -4,7 +4,7 @@
 
 ## Installation
 
-Afin de lancer l'application Web de messagerie, il faut tout premièrement lancer le script `launch_docker.sh` qui se trouve dans la racine du projet. Le contenu du script:
+Afin de lancer l'application Web de messagerie, il faut tout premièrement lancer le script `launch_docker.sh` qui se trouve à la racine du projet. Le contenu du script:
 
 ```sh
 # arrêt du container si il tourne déjà en arrière plan
