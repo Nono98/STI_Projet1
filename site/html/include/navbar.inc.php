@@ -34,7 +34,7 @@ if(!isset($_SESSION['Login'])){
                 <?php }
                 else { ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="./index.php">Connection <i class="fas fa-sign-in-alt"></i></a>
+                        <a class="nav-link" href="./index.php">Login <i class="fas fa-sign-in-alt"></i></a>
                     </li>
 
                 <?php } ?>
@@ -46,7 +46,7 @@ if(!isset($_SESSION['Login'])){
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownmenu">
                         <a href="./editPassword.php" class="dropdown-item" title="editPassword">Edit password</a>
-                        <a href="./logoutTreat.php" class="dropdown-item" title="disconnection">Disconnect</a>
+                        <a href="./logoutTreat.php" class="dropdown-item" title="disconnection">Logout</a>
                     </div>
                 </div>
             <?php } ?>
