@@ -27,7 +27,7 @@ foreach ($message as $m){
             <!-- Formulaire d'affichage' -->
             <form action="./answerMessage.php" method="post">
                 <div class="form-group">
-                    <label for="inputDate" class="col-lg-8">From</label>
+                    <label for="inputDate" class="col-lg-8">Date</label>
                     <div class="col-lg-12">
                         <input type="text" readonly class="form-control form-connexion-input" id="inputDate" name="inputDate" placeholder="To" value="<?php echo $msg['date'] ?>">
                     </div>

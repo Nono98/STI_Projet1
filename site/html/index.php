@@ -29,7 +29,7 @@
 
                     <div class="form-group pull-right">
                         <div class="col-lg-8">
-                            <button type="submit" class="btn btn-outline-primary">Connexion</button>
+                            <button type="submit" class="btn btn-outline-primary">Login</button>
                         </div>
                     </div>
                 </form>
