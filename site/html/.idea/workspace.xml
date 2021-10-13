@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e415e919-df4f-4628-b726-50096cdb9f05" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../databases/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/../databases/database.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/dbConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/dbConnection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/editUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/footer.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/footer.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginTreat.php" beforeDir="false" afterPath="$PROJECT_DIR$/loginTreat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/users.php" afterDir="false" />
-    </list>
+    <list default="true" id="e415e919-df4f-4628-b726-50096cdb9f05" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,6 +80,7 @@
       <workItem from="1633628891912" duration="9474000" />
       <workItem from="1633691677160" duration="5483000" />
       <workItem from="1633699868953" duration="332000" />
+      <workItem from="1634045214913" duration="1000" />
     </task>
     <servers />
   </component>
